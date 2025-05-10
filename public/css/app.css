@@ -1,0 +1,184 @@
+/* GLOBAL STYLES */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fdfdfd; /* Default text color is white */
+  }
+  
+  img {
+    height: auto;
+  }
+  
+  /* APP BACKGROUND */
+  main {
+    background-image: url('/img/test.jpg');
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: 100%;
+    background-attachment: fixed;
+    color: white;
+  }
+  
+  /* RESPONSIVE CONTAINER */
+  .responsive-container {
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  @media (min-width: 576px) {
+    .responsive-container {
+      padding: 0 30px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .responsive-container {
+      padding: 0 50px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .responsive-container {
+      max-width: 1140px;
+    }
+  }
+  
+  @media (max-width: 414px) { /* For iPhone XR */
+    .responsive-container {
+      margin: 0; /* Remove left and right margin */
+      padding: 0; /* Remove left and right padding */
+      max-width: 100%; /* Ensure the container takes up full width */
+    }
+  }
+  
+  /* CARD */
+  .card {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 0 !important;
+    background-color: #1c1c1c; /* Dark grey background */
+    color: #fff;
+    border: 0px solid #444;
+  }
+  
+  .card-header {
+    background-color: #d32f2f;
+    color: #fff;
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+    border-radius: 0 !important;
+  }
+  
+  /* CAROUSEL */
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* MARQUEE */
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .marquee-text {
+    display: inline-block;
+    padding-left: 50%; /* Start from the right side */
+    animation: marquee 15s linear infinite;
+    font-size: 1.2rem;
+    text-transform: uppercase; /* Capitalize text */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .marquee-text {
+      font-size: 1rem;
+      animation: marquee 12s linear infinite;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .marquee-text {
+      font-size: 0.8rem;
+      animation: marquee 15s linear infinite;
+    }
+  }
+  
+  /* NAVBAR */
+  .navbar img {
+    filter: invert(100%); /* Invert logo color */
+  }
+  
+  .navbar-toggler {
+    display: inline-block;
+    padding-left: 100%;
+  }
+  
+  @media (max-width: 576px) {
+    .navbar img {
+      width: 120px; /* Adjust logo size for small screens */
+    }
+  }
+  
+  /* SUBNAV */
+  .subnav {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    display: none; /* Initially hidden */
+    text-align: center;
+    border-bottom: 1px solid #444;
+  }
+  
+  .subnav.visible {
+    display: block; /* Show when visible class is added */
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: #121212;
+    color: #fff;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+  }
+  
+  footer a {
+    color: #d32f2f; /* Red color for links */
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ROW ADJUSTMENTS */
+  .row {
+    margin: 0; /* Remove negative margin */
+    padding: 0;
+  }
+  
+  /* CUSTOM CARD MARGIN */
+  .custom-card {
+    margin: 0 0 16em 0;
+  }
+  
+  @media (max-width: 768px) {
+    .custom-card {
+      margin: 0 0 2em 0 !important; /* Reduce margin on small screens */
+    }
+  }
+  
