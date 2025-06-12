@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
+    public $timestamps = true;
      protected $table = 'articles';
     protected $fillable = [
         'title',
@@ -13,7 +14,5 @@ class Article extends Model
         'link',
         'FotoContent',
         'Tipe',
-        'created_at',
-        'updated_at',
     ];
 }

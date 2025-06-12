@@ -22,5 +22,23 @@
     @include('partials.footer')
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script>
+  function loadContent(url) {
+    fetch(url)
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('main-content').innerHTML = html;
+        history.pushState({ html }, "/",);
+      });
+  }
+
+  // Support tombol back/forward browser
+  window.onpopstate = function(event) {
+    if (event.state && event.state.html) {
+      document.getElementById('main-content').innerHTML = event.state.html;
+    }
+  };
+</script>
+
 </body>
 </html>

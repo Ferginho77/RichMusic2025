@@ -14,7 +14,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active text-white" href="#home">
+                <a class="nav-link active text-white" href="/">
                   Home
                 </a>
               </li>
@@ -35,25 +35,18 @@
                   <li><a class="dropdown-item" href="#">List</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  About
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">About</a></li>
-                  <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
-                  @if(Auth::check())
-                  <li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#" onclick="loadContent('/about-content')">About</a>
+              </li>
+              <li class="nav-item">
+                 @if(Auth::check())
                     <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('Apakah Yakin Untuk Meninggalkan Aplikasi?')">
                       @csrf
-                      <button class="dropdown-item text-danger" type="submit">Logout</button>
+                      <button class="nav-link text-danger" type="submit">Logout</button>
                     </form>
-                  </li>
-                  
                   @else
-                    <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
+                    <a class="nav-link text-white" href="{{ route('login') }}">Login</a>
                   @endif
-                </ul>
               </li>
             </ul>
             <form class="d-flex" role="search">

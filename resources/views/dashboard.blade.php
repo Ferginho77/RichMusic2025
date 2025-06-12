@@ -4,7 +4,7 @@
 @section('title', 'Landing Page')
 
 @section('content')
-<div class="row">
+<div id="main-content" class="row">
     <div class="col-md-8">
         @include('partials.carousel')
 

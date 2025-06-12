@@ -76,6 +76,7 @@
                         </div>
                     </div>
                 </div>
+                 <p class="text-center" style="font-size: 14px;"><a href="/" style="text-decoration: none;">Kembali Ke Halaman Home</a></p>
             </div>
         </div>
     </main>
